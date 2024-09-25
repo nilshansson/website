@@ -1,8 +1,8 @@
 import Navbar from "./_components/navbar";
-import { Manrope } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
 
-const archivo = Manrope({
+const archivo = Urbanist({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-archivo",
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={archivo.variable}>
-      <body className="font-archivo">
+      <body className="font-archivo bg-customWhite">
         <Navbar />
         <main>{children}</main>
       </body>

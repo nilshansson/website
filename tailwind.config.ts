@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customWhite: "#EEEEEE",
       },
       fontFamily: {
         archivo: ["var(--font-archivo)", "sans-serif"],
