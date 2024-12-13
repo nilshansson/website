@@ -1,12 +1,14 @@
 import Navbar from "./_components/navbar";
-import { Urbanist } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
-import Footer from "./_components/footer";
+import "./index.css";
 
-const archivo = Urbanist({
+// Importing the Roboto font with weight, subsets, and display properties
+const roboto = Roboto({
+  weight: ["400", "700"], // Add font weights here (you can choose different ones)
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-archivo",
+  variable: "--font-roboto", // Font variable
 });
 
 export default function RootLayout({
@@ -15,18 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={archivo.variable}>
-      <head>
-        {/* Add the FontAwesome CDN link */}
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
-        />
-      </head>
-      <body className="font-archivo bg-customWhite flex flex-col">
+    <html lang="en" className={roboto.variable}>
+      <body className="font-roboto bg-white flex flex-col pt-10">
         <Navbar />
         <main>{children}</main>
-        <Footer />
       </body>
     </html>
   );

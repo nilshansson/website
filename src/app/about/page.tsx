@@ -1,16 +1,22 @@
 export default function Aboutpage() {
   return (
-    <div className="flex flex-row items-center justify-between w-full h-screen px-10 animate-fadeIn">
+    <div className="flex flex-row items-start justify-center w-full h-screen px-10 animate-fadeIn ">
+      {/* Image Section */}
+      <div className="w-[30%] mb-16 ">
+        {/* Adjusted top margin */}
+        <img src="/images/nils.jpg" className="w-full h-auto" />
+      </div>
+
       {/* Text Section */}
-      <div className="w-1/2 pr-8">
-        <h1 className="text-xl">
-          <strong>Nils Hansson Meng</strong> is a distinguished abstract
-          expressionist painter, renowned for his mastery of color and dynamic
-          forms. Entirely self-taught, his journey into the art world has been
-          one of passion, discovery, and profound emotional expression. His work
-          has been showcased in numerous prestigious exhibitions, and he has
-          been commissioned by discerning collectors, each seeking to capture a
-          piece of his unique artistic vision.
+      <div className="w-[40%] text-left pb-10 pl-6">
+        <h1 className="text-sm md:text-xl">
+          <strong className="text-md">Nils Hansson Meng</strong> is a
+          distinguished abstract expressionist painter, renowned for his mastery
+          of color and dynamic forms. Entirely self-taught, his journey into the
+          art world has been one of passion, discovery, and profound emotional
+          expression. His work has been showcased in numerous prestigious
+          exhibitions, and he has been commissioned by discerning collectors,
+          each seeking to capture a piece of his unique artistic vision.
           <br />
           <br />
           Central to Nils’ creative process is the belief that painting is not
@@ -34,14 +40,6 @@ export default function Aboutpage() {
           opportunities for growth. His intuitive approach allows each painting
           to find its own path, revealing layers of depth as the work unfolds.
         </h1>
-      </div>
-
-      {/* Video Section */}
-      <div className="w-1/2">
-        <video className="w-full h-auto" autoPlay loop muted playsInline>
-          <source src="/images/video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
       </div>
     </div>
   );
