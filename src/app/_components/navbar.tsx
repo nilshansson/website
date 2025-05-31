@@ -17,12 +17,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 h-screen w-[300px]  shadow-md animate-fadeIn pt-10 px-10">
+    <nav className="fixed top-0 left-0 h-screen w-[300px] shadow-md animate-fadeIn pt-10 px-10 bg-white z-50">
       <div className="flex flex-col items-center h-full">
         {/* Logo Section */}
         <div className="mb-8">
           <Link href="/" className="relative group">
-            <div className="absolute inset-0  z-10 animate-reveal group-hover:animate-reveal-hover" />
+            <div className="absolute inset-0 z-10 animate-reveal group-hover:animate-reveal-hover" />
             <Image
               src="/images/signatur.png"
               alt="Signature"
@@ -36,6 +36,7 @@ export default function Navbar() {
           </h1>
         </div>
 
+        {/* Links Section */}
         <div className="flex flex-col items-start w-full space-y-3">
           {links.map(({ href, label }) => (
             <Link

@@ -21,7 +21,6 @@ function App() {
       <Lightbox
         plugins={[Captions]}
         captions={{
-          showToggle: true,
           descriptionTextAlign: "end",
         }}
         index={index}

@@ -5,10 +5,10 @@ import "./index.css";
 
 // Importing the Roboto font with weight, subsets, and display properties
 const roboto = Roboto({
-  weight: ["400", "700"], // Add font weights here (you can choose different ones)
+  weight: ["400", "700"],
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-roboto", // Font variable
+  variable: "--font-roboto",
 });
 
 export default function RootLayout({
@@ -18,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={roboto.variable}>
-      <body className="font-roboto bg-white flex flex-col pt-10">
+      <body className="font-roboto bg-white flex">
         <Navbar />
-        <main>{children}</main>
+        <main className="ml-[300px] flex-1 p-10">{children}</main>
       </body>
     </html>
   );
