@@ -8,7 +8,17 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export function CarouselDemo({ images }) {
+interface Image {
+  src: string;
+  alt?: string; // Om du vill tillåta att du kan specificera alt-texter
+}
+
+interface CarouselDemoProps {
+  images: Image[];
+}
+import Image from "next/image";
+
+export function CarouselDemo({ images }: CarouselDemoProps) {
   return (
     <div className="flex justify-center items-center">
       <Carousel className="w-full max-w-4xl">
@@ -21,9 +31,9 @@ export function CarouselDemo({ images }) {
             >
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-0 overflow-hidden">
-                  <img
+                  <Image
                     src={image.src}
-                    alt={`Slide ${index + 1}`}
+                    alt={image.alt || `Slide ${index + 1}`}
                     className="object-cover w-full h-full"
                   />
                 </CardContent>

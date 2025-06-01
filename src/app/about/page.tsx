@@ -1,10 +1,15 @@
+import Image from "next/image";
 export default function Aboutpage() {
   return (
     <div className="flex flex-row items-start justify-center w-full h-screen px-10 animate-fadeIn ">
       {/* Image Section */}
       <div className="w-[30%] mb-16 ">
         {/* Adjusted top margin */}
-        <img src="/images/nils.jpg" className="w-full h-auto" />
+        <Image
+          src="/images/nils.jpg"
+          alt="photo of NIls Hansson"
+          className="w-full h-auto"
+        />
       </div>
 
       {/* Text Section */}

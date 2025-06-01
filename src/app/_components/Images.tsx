@@ -1,5 +1,5 @@
 import { FC } from "react";
-
+import Image from "next/image";
 interface ImagesProps {
   data: {
     src: string;
@@ -24,7 +24,7 @@ const Images: FC<ImagesProps> = (props) => {
           key={index}
           className="image"
         >
-          <img src={slide.src} alt={slide.description} />
+          <Image src={slide.src} alt={slide.description} />
         </div>
       ))}
     </div>

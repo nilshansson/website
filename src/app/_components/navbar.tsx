@@ -53,9 +53,10 @@ export default function Navbar() {
           ))}
           <Link href="https://www.instagram.com/nilshanssonmeng">
             <div className="pl-3 pt-3">
-              <img
+              <Image
                 src="/images/insta-logo.png"
                 style={{ width: "20px", height: "auto" }}
+                alt="instagram logo"
               />
             </div>
           </Link>
