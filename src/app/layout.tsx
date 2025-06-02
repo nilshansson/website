@@ -19,7 +19,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={roboto.variable}>
       <body className="font-roboto bg-white flex">
-        <Navbar />
         <main className="ml-[300px] flex-1 p-10">{children}</main>
       </body>
     </html>
